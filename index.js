@@ -1,6 +1,14 @@
 import express from "express";
 const app = express();
 
+app.get("/", (req, res) => {
+  const htmlText = `
+    <h1 style='text-align:center'>Welcome to Backend Development Course</h1>
+    <h3 style='text-align:center'>Api's of BD1.4_HW_2.js are hosted here.</h3>
+  `;
+  res.send(htmlText);
+});
+
 // Question 1:
 // Given username generate a GitHub profile URL for the user
 app.get("/github-profile", (req, res) => {
